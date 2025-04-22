@@ -1,0 +1,25 @@
+<!DOCTYPE html> <!--Tells the navigator this file is html5-->
+<html xmlns :th="http://www.thymeleaf.org"> <!--Declares we will use Thymeleaf-->
+
+<head>
+    <meta charset="UTF-8"> <!--defines text codification to show chracters like ö, ü, ä-->
+    <title>BSI Formular</title> <!--webiste name-->
+</head>
+
+<body>
+    <form action="/bsi" method="post"> <!--form creates a formular-->
+        <!--action defines where the data will be sent--> <!--/bsi is the servers route (endpoint)-->
+        <!--method defines how the data will be sent-->
+        <label for="input1">Körpergröße in cm</label> <!--for and id must be the same-->
+        <input type="number" id="input1" name="input1" required><br><br> <!--name = variable's name that will be sent to the server-->
+        
+        <label for="input2">Schuhgröße</label>
+        <input type="number" id="input2" name="input2" required><br><br>
+
+        <label for="input3">Semesterzahl</label>
+        <input type="number" id="input3" name="input3" required><br><br>
+        
+        <button type="submit">OK</button>
+    </form>
+</body>
+</html>
